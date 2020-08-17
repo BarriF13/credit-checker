@@ -6,7 +6,7 @@ export class Wallet extends Component {
   render() {
     return (
       <div>
-        <h3>wallet balance: { this.props.balance }</h3>
+        <h3 className='balance'>wallet balance: { this.props.balance }</h3>
       </div>
     )
   }
