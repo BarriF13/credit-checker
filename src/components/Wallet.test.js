@@ -7,9 +7,9 @@ import React, { Component } from 'react';
 
 import  { shallow } from 'enzyme';
 
-import wallet from './wallet';
+import Wallet from './Wallet';
 
-describe('wallet', ()=>{
+describe('Wallet', ()=>{
   const wallet = shallow(<Wallet/>);
 
   it('renders porperly', () =>{
