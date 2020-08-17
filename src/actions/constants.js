@@ -1,2 +1,2 @@
-//this is my action
+//constants are actions 
 export const SET_BALANCE = 'SET_BALANCE';

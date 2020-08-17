@@ -1,7 +1,7 @@
 import * as constants from './constants';
 import * as actions from './balance';
 
-//test the first action
+//test the first action creator for checking the balance 
 
 it('creates an action to set the balance ', ()=>{
   const balance = 0;
