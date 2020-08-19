@@ -6,6 +6,7 @@ const balance = (state = 0 , action ) =>{
   switch( action.type ){
     case constants.SET_BALANCE:
     return action.balance;
+    case constants.DEPOSIT:;
     default:
       return state;
   }
