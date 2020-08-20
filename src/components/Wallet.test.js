@@ -14,7 +14,7 @@ describe('Wallet', () => {
   const props = { balance: 20 };
   const wallet = shallow(<Wallet {...props} />);
 
-  it('renders porperly', () => {
+  it('renders properly', () => {
     expect(wallet).toMatchSnapshot();
   });
 
@@ -27,16 +27,16 @@ describe('Wallet', () => {
     expect(wallet.find('.input-wallet').exists()).toBe(true);
   });
 
-  describe('when the user types into the wallet input', () => {
+  describe('when the user types into the wallet input', ()=> {
     const userBalance = '25';
 
     beforeEach(() => {
       wallet.find('.input-wallet')
-        .simulate('change', { target: { value: userBalance } })
+       .simulate('change', { target: { value: userBalance } });
     });
 
-    it('updates the local wallet balance in `state` and converts it to a number', () => {
-      expect(Wallet.state().balance).toEqual(parsInt(userBalance, 10));
-    })
+    it('updates the local wallet balance in `state` and converts it to a number', ()=> {
+      expect(wallet.state().balance).toEqual(parseInt(userBalance, 10));
+    });
   });
 });
