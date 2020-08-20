@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 //connect comp to store with connect 
 import {connect} from 'react-redux';
+import {balance } from '../actions/balance'
 
 export class Wallet extends Component {
   constructor(){
