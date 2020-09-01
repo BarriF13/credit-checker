@@ -5,12 +5,27 @@ configure({ adapter: new Adapter() });
 
 import React, { Component } from 'react';
 
-import { shallow } from 'enzyme';
+import { mount, shallow } from 'enzyme';
 import { Credit } from './Credit'
+import { mock } from 'fetch-mock';
 
 describe('Credit', () => {
-  const credit = shallow(<Credit />);
+  const mockFetchBitcoin = jest.fn();
+  const props = { balance:10, bitcoin: {} };
+ let credit = shallow(<Credit {...props} />);
   it ('renders properly', ()=>{
     expect(credit).toMatchSnapshot();
+  });
+
+  describe('when mounted', ()=>{
+    beforeEach(() => {
+      props.fetchBitcoin =mockFetchBitcoin;
+      credit = mount(<Credit {...props}/>)
+    });
+
+    it('dispatches the `fetchBitcoin()` method it receives from props',()=>{
+      expect(mockFetchBitcoin).toHaveBeenCalled();
+    })
+
   })
 })

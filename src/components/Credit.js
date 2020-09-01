@@ -1,8 +1,11 @@
-
-
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { fetchBitcoin } from '../actions/bitcoin';
 
 export class Credit extends Component {
+  componentDidMount(){
+    
+  }
   render() {
     return (
       <div>
@@ -12,4 +15,4 @@ export class Credit extends Component {
   }
 }
 
-export default Credit;
+export default connect(state => state, { fetchBitcoin } )(Credit) ;
