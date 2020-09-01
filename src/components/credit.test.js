@@ -10,8 +10,7 @@ import { Credit } from './Credit'
 
 describe('Credit', () => {
   const credit = shallow(<Credit />);
-
   it ('renders properly', ()=>{
-    expect(credit).toMatchSnapShot();
+    expect(credit).toMatchSnapshot();
   })
 })
