@@ -1,5 +1,6 @@
-import React, { Component } from 'react'
-import  Wallet  from './Wallet'
+import React, { Component } from 'react';
+import  Wallet  from './Wallet';
+import  Credit  from './Credit';
 
 export class App extends Component {
   render() {
@@ -8,6 +9,9 @@ export class App extends Component {
        <h2>Credit checker</h2>
        <hr/>
        <Wallet/>
+       <hr/>
+       <Credit />
+
       </div>
     )
   }

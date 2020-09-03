@@ -19,4 +19,10 @@ describe( 'App', ()=>{
 
     expect(app.find('Connect(Wallet)').exists()).toBe(true);
   });
+  
+  it('contains a connected credit comp', ()=> { 
+
+    expect(app.find('Connect(Credit)').exists()).toBe(true);
+  });
+
 });
