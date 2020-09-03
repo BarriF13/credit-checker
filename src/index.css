@@ -4,7 +4,9 @@ body{
   text-align: center;
   padding: 5%;
   font-size: 18px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: aliceblue;
+  height: 100vh;
 
 }
 button{
@@ -12,13 +14,13 @@ button{
 }
  input {
   border: none;
-  padding: 7px;
+  padding: 5px;
   border-radius: 3px;
   background-color: rgb(246, 247, 248);
 }
 button {
   border: none;
-  padding: 10px;
+  padding: 7px 15px;
   border-radius: 3px;
   color: aliceblue;
   background-color: rgb(88, 160, 233);
