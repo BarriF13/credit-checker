@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 import  Wallet  from './Wallet';
 import  Credit  from './Credit';
 
-export class App extends Component {
-  render() {
+const App =()=> {
+ 
     return (
       <div>
        <h2>Credit checker</h2>
@@ -11,10 +11,8 @@ export class App extends Component {
        <Wallet/>
        <hr/>
        <Credit />
-
       </div>
     )
   }
-}
 
 export default App;
