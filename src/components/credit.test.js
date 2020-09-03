@@ -1,3 +1,4 @@
+
 import { configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 
@@ -11,7 +12,7 @@ import { Credit } from './Credit'
 
 describe('Credit', () => {
   
-  const props = { balance:10, bitcoin: {} };
+  let props = { balance:10, bitcoin: {} };
   let credit = shallow(<Credit {...props} />);
 
   it ('renders properly', ()=>{
@@ -20,6 +21,7 @@ describe('Credit', () => {
 
   describe('when mounted', ()=>{
     const mockFetchBitcoin = jest.fn();
+
     beforeEach(() => {
       props.fetchBitcoin = mockFetchBitcoin;
       credit = mount(<Credit {...props}/>)
